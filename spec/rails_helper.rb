@@ -1,3 +1,13 @@
+OmniAuth.config.test_mode = true
+OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
+  provider: 'google_oauth2',
+  uid: '123456789',
+  info: {
+    name: 'Test User',
+    email: 'test@example.com',
+    image: 'http://example.com/image.png'
+  }
+})
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
